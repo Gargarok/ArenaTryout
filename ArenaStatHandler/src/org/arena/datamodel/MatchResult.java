@@ -25,4 +25,8 @@ public class MatchResult {
 			  "id	INT	PRIMARY KEY	NOT NULL," +
 			  "description VARCHAR(127)	NOT NULL)";
   }
+  
+  public String toString() {
+    return this.description;
+  }
 }

@@ -39,4 +39,9 @@ public class MatchType {
   public static int getMaxPlayers(){
 	  return maxPlayerNumber;
   }
+
+  @Override
+  public String toString() {
+    return this.name;
+  }
 }

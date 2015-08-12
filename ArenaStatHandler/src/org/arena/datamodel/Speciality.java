@@ -17,9 +17,11 @@ public class Speciality {
   public String getSpecName() {
     return specName;
   }
+  
   public String getClassName() {
     return className;
   }
+  
   public String getRole() {
     return role;
   }
@@ -34,5 +36,9 @@ public class Speciality {
 			  "specname	VARCHAR(31)	PRIMARY KEY	NOT NULL," +
 			  "classname	VARCHAR(31)	NOT NULL," +
 			  "role	VARCHAR(31)	NOT NULL)";
+  }
+  
+  public String toString() {
+    return this.className + " " + this.specName + " (" + this.role + ")";
   }
 }

@@ -1,8 +1,7 @@
 package org.arena.db;
 
-import javax.xml.transform.Result;
-
 import org.arena.datamodel.Match;
+import org.arena.datamodel.MatchResult;
 import org.arena.datamodel.MatchType;
 import org.arena.datamodel.Speciality;
 import org.arena.datamodel.Strategy;
@@ -21,7 +20,7 @@ public class SQLiteHandler implements DataGatherer {
   }
 
   @Override
-  public Result[] getKnownResults() {
+  public MatchResult[] getKnownResults() {
     // TODO Auto-generated method stub
     return null;
   }

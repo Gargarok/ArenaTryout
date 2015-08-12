@@ -98,4 +98,19 @@ public class Match {
 			  "FOREIGN KEY(result)	REFERENCES match_results(id)," +
 			  "FOREIGN KEY(strat)	REFERENCES strategy(id))";
   }
+  
+  public String toString() {
+    StringBuilder builder = new StringBuilder();
+    for (String names : this.players.keySet()) {
+      builder.append(names);
+      builder.append(" ");
+    }
+    builder.append("VS ");
+    for (Speciality spec : this.enemies) {
+      builder.append(spec);
+      builder.append(" ");
+    }
+    builder.append(" - " + this.date.toString());
+    return builder.toString();
+  }
 }
