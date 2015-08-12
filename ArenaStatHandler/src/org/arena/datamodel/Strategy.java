@@ -16,4 +16,15 @@ public class Strategy {
   public String getFocusDescription() {
     return focusDescription;
   }
+  
+  public String entryCreation() {
+	  return  "INSERT INTO strategy(id, description)" +
+			  "VALUES (" + id + ", " + focusDescription + ")";
+  }
+  
+  public static String tableCreation() {
+	  return  "CREATE TABLE strategy(" +
+			  "id	INT	PRIMARY KEY	NOT NULL," +
+			  "description	VARCHAR(255)	NOT NULL)";
+  }
 }

@@ -14,4 +14,15 @@ public class MatchResult {
   public String getDescription() {
     return description;
   }
+  
+  public String entryCreation() {
+	  return  "INSERT INTO match_results(id, description)" +
+			  "VALUES (" + id + ", " + description + ")";
+  }
+  
+  public static String tableCreation() {
+	  return  "CREATE TABLE match_results(" +
+			  "id	INT	PRIMARY KEY	NOT NULL," +
+			  "description VARCHAR(127)	NOT NULL)";
+  }
 }

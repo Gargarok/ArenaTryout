@@ -23,4 +23,16 @@ public class Speciality {
   public String getRole() {
     return role;
   }
+  
+  public String entryCreation() {
+	  return  "INSERT INTO speciality(specname, classname, role)" +
+			  "VALUES (" + specName + ", " + className + "," + role +")";
+  }
+  
+  public static String tableCreation() {
+	  return  "CREATE TABLE speciality(" +
+			  "specname	VARCHAR(31)	PRIMARY KEY	NOT NULL," +
+			  "classname	VARCHAR(31)	NOT NULL," +
+			  "role	VARCHAR(31)	NOT NULL)";
+  }
 }
