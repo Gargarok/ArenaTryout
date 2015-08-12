@@ -1,83 +1,83 @@
 package org.arena.lang;
 
 public class FrenchText implements LocalText {
-
+  private final static String MATCH_TYPE = "Type de match";
+  private final static String PLAYERS = "Joueurs";
+  private final static String ADD_DATA = "Données";
+  private final static String STATS = "Statistiques";
+  private final static String ENEMIES = "Ennemis";
+  private final static String NAME = "Nom";
+  private final static String ENEMY = "Ennemi";
+  private final static String STRAT = "Stratégie";
+  private final static String RESULT = "Résultat";
+  private final static String DATE = "Date (JJ/MM/AAAA)";
+  private final static String DB_MERGE = "Fusionner avec la base de données";
+  private final static String DB_MERGE_CONFIRM = "Fusionner";
+  private final static String DATA_CONFIRM = "Confirmer";
+  
   @Override
   public String getMatchType() {
-    // TODO Auto-generated method stub
-    return null;
+    return MATCH_TYPE;
   }
 
   @Override
   public String getPlayers() {
-    // TODO Auto-generated method stub
-    return null;
+    return PLAYERS;
   }
 
   @Override
   public String getAddData() {
-    // TODO Auto-generated method stub
-    return null;
+    return ADD_DATA;
   }
 
   @Override
   public String getStats() {
-    // TODO Auto-generated method stub
-    return null;
+    return STATS;
   }
 
   @Override
   public String getEnemies() {
-    // TODO Auto-generated method stub
-    return null;
+    return ENEMIES;
   }
 
   @Override
   public String getName() {
-    // TODO Auto-generated method stub
-    return null;
+    return NAME;
   }
 
   @Override
   public String getEnemy(int enemyNumber) {
-    // TODO Auto-generated method stub
-    return null;
+    return ENEMY + " " + enemyNumber;
   }
 
   @Override
   public String getStrat() {
-    // TODO Auto-generated method stub
-    return null;
+    return STRAT;
   }
 
   @Override
   public String getResult() {
-    // TODO Auto-generated method stub
-    return null;
+    return RESULT;
   }
 
   @Override
   public String getDate() {
-    // TODO Auto-generated method stub
-    return null;
+    return DATE;
   }
 
   @Override
   public String getDbMerge() {
-    // TODO Auto-generated method stub
-    return null;
+    return DB_MERGE;
   }
 
   @Override
   public String getMergeConfirm() {
-    // TODO Auto-generated method stub
-    return null;
+    return DB_MERGE_CONFIRM;
   }
 
   @Override
   public String getDataConfirm() {
-    // TODO Auto-generated method stub
-    return null;
+    return DATA_CONFIRM;
   }
 
 }

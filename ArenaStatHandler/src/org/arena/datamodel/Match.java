@@ -44,4 +44,20 @@ public class Match {
   public Strategy getStrategy() {
     return this.strat;
   }
+  
+  @Override
+  public String toString() {
+    StringBuilder builder = new StringBuilder();
+    for (String names : this.players.keySet()) {
+      builder.append(names);
+      builder.append(" ");
+    }
+    builder.append("VS ");
+    for (Speciality spec : this.enemies) {
+      builder.append(spec);
+      builder.append(" ");
+    }
+    builder.append(" - " + this.date.toString());
+    return builder.toString();
+  }
 }

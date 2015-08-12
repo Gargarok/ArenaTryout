@@ -14,4 +14,9 @@ public class MatchResult {
   public String getDescription() {
     return description;
   }
+  
+  @Override
+  public String toString() {
+    return this.description;
+  }
 }

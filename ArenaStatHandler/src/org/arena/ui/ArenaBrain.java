@@ -1,7 +1,7 @@
 package org.arena.ui;
 
-import javax.xml.transform.Result;
-
+import org.arena.datamodel.Match;
+import org.arena.datamodel.MatchResult;
 import org.arena.datamodel.MatchType;
 import org.arena.datamodel.Speciality;
 import org.arena.datamodel.Strategy;
@@ -15,9 +15,9 @@ public class ArenaBrain {
   private LocalText textManager; 
   private final DataGatherer dataManager;
   
-  public ArenaBrain(String lang, DataGatherer dataManager) {
+  public ArenaBrain(String langCode, DataGatherer dataManager) {
     this.dataManager = dataManager;
-    this.textManager = languageFactory(lang);
+    this.textManager = languageFactory(langCode);
   }
   
   public LocalText getLang() {
@@ -32,7 +32,7 @@ public class ArenaBrain {
     return dataManager.getKnownStrats();
   }
   
-  public Result[] getResults() {
+  public MatchResult[] getResults() {
     return dataManager.getKnownResults();
   }
   
@@ -40,6 +40,15 @@ public class ArenaBrain {
     return dataManager.getKnownPlayerSpecs();
   }
   
+  public void mergeDb(String otherDb) {
+    this.dataManager.mergeDatabases(otherDb);
+  }
+  
+  public void addMatch(Match matchToAdd) {
+    this.dataManager.addMatch(matchToAdd);
+  }
+  
+  // TODO: english file and default as english
   private static LocalText languageFactory(String language) {
     switch (language) {
       case LANG_FR:

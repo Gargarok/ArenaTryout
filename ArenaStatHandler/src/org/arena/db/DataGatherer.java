@@ -1,8 +1,7 @@
 package org.arena.db;
 
-import javax.xml.transform.Result;
-
 import org.arena.datamodel.Match;
+import org.arena.datamodel.MatchResult;
 import org.arena.datamodel.MatchType;
 import org.arena.datamodel.Speciality;
 import org.arena.datamodel.Strategy;
@@ -19,7 +18,7 @@ public interface DataGatherer {
   /**
    * @return All matches results known to man. Like, Victory, Defeat, Draw, and whatever ...  
    */
-  public Result[] getKnownResults();
+  public MatchResult[] getKnownResults();
   
   /**
    * @return All the Strategies known as of today. Typically, we can expect something like "Focus one each", "Alternate Focus", 
@@ -28,7 +27,7 @@ public interface DataGatherer {
   public Strategy[] getKnownStrats();
   
   /**
-   * @return All the player specializations existing in the database: supposed to contains the different 
+   * @return All the player specializations existing in the database: supposed to contain the different 
    * combinations of classes and their specializations, along with the associated role
    */
   public Speciality[] getKnownPlayerSpecs();

@@ -16,4 +16,9 @@ public class Strategy {
   public String getFocusDescription() {
     return focusDescription;
   }
+
+  @Override
+  public String toString() {
+    return this.focusDescription;
+  }
 }

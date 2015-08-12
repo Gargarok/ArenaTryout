@@ -22,4 +22,9 @@ public class MatchType {
   public int getPlayerNumber() {
     return this.playerNumber;
   }
+  
+  @Override
+  public String toString() {
+    return this.name;
+  }
 }
