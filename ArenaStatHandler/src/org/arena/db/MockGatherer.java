@@ -38,9 +38,9 @@ public class MockGatherer implements DataGatherer {
 
   @Override
   public Speciality[] getKnownPlayerSpecs() {
-    Speciality s1 = new Speciality(1, "Mathemagician", "Wizard", "Annoyer");
-    Speciality s2 = new Speciality(2, "Holy Knight", "Thug", "Annoyer");
-    Speciality s3 = new Speciality(3, "Wanderer", "Thug", "Murderer");
+    Speciality s1 = new Speciality("Mathemagician", "Wizard", "Annoyer");
+    Speciality s2 = new Speciality("Holy Knight", "Thug", "Annoyer");
+    Speciality s3 = new Speciality("Wanderer", "Thug", "Murderer");
     return new Speciality[]{s1, s2, s3};
   }
 
